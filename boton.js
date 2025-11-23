@@ -15,8 +15,7 @@
   if (typeof LICENCIA_RECIBIDA === 'undefined' ||
       LICENCIA_RECIBIDA !== LICENCIA_VALIDA) {
 
-    // Aquí puedes poner alert si quieres ver que falla, pero para clientes
-    // en producción es mejor dejar solo el console.warn.
+    // Para producción normalmente solo dejaría el console.warn
     console.warn('[PRUEBA-DE-OFUSCAR] Licencia inválida o ausente.');
     return; // CORTA la ejecución: nada de abajo se ejecuta
   }
