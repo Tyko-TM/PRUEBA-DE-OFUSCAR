@@ -1,4 +1,4 @@
-// boton.js - versión con LICENCIA (sin ofuscar)
+// boton.js - versión con LICENCIA  (sin ofuscar)
 (function () {
   'use strict';
 
