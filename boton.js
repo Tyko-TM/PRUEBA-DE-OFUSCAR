@@ -1,22 +1,24 @@
-// boton.js - versión con LICENCIA usando LICENCIA_RECIBIDA
+// boton.js - versión con LICENCIA (sin ofuscar)
 (function () {
   'use strict';
 
   // ==========================
   //   CONFIGURACIÓN LICENCIA
   // ==========================
-  // ESTA es la licencia válida para este script
+  // ESTA es la licencia que debe coincidir con la que envía el lanzador
   var LICENCIA_VALIDA = 'TYKO-PRUEBA-001';
 
-  // El lanzador define antes una variable global:
+  // Esta variable global la define el lanzador ANTES de ejecutar este código:
   //   var LICENCIA_RECIBIDA = '...';
   //
-  // Si no existe o no coincide, no hacemos nada.
+  // Si no existe o no coincide, el script NO hace nada.
   if (typeof LICENCIA_RECIBIDA === 'undefined' ||
       LICENCIA_RECIBIDA !== LICENCIA_VALIDA) {
 
+    // Aquí puedes poner alert si quieres ver que falla, pero para clientes
+    // en producción es mejor dejar solo el console.warn.
     console.warn('[PRUEBA-DE-OFUSCAR] Licencia inválida o ausente.');
-    return; // CORTA la ejecución del script
+    return; // CORTA la ejecución: nada de abajo se ejecuta
   }
 
   // ==========================
@@ -25,7 +27,7 @@
   function crearBoton() {
     if (document.getElementById('btn-lo-lograste-demo')) return;
 
-    var btn = document.createElement('button');
+    const btn = document.createElement('button');
     btn.id = 'btn-lo-lograste-demo';
     btn.textContent = 'LO LOGRASTE';
     btn.style.position = 'fixed';
